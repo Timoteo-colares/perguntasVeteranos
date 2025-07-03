@@ -1,0 +1,86 @@
+/* Estiliza o corpo da página */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Fonte moderna */
+    background: linear-gradient(to right, #f0f4f8, #d9e4f5); /* Gradiente azul-claro profissional */
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/03d1da8d-f4bc-4a28-9547-ce8195d6bb07/La+Creaci%C3%B2n+de+Cheems');
+}
+
+/* Título principal */
+h1 {
+    color: #1a1a1a; /* Quase preto */
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+
+/* Container que posiciona os cards lado a lado */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Estilo base para cada card */
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 250px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card de Soft Skills: verde-oliva suave */
+.card.soft {
+    border-top: 6px solid #0051ff; 
+}
+
+/* Card de Hard Skills: roxo profissional */
+.card.hard {
+    border-top: 6px solid #4c4d93;
+}
+
+/* Título dentro do card */
+.card h2 {
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos botões */
+button {
+    background: linear-gradient(to right, #6a4c93, #2d3142); /* Roxo escuro para azul acinzentado */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background: linear-gradient(to right, #52307c, #1f2235);
+}
+
+/* Estilo das áreas de pergunta e resposta */
+#pergunta, #resposta {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
