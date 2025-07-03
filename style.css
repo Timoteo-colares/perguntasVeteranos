@@ -1,86 +1,83 @@
-/* Estiliza o corpo da página */
+/* Aplica a todos os elementos - garante que padding e border não alterem o tamanho total */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo da página */
 body {
-    font-family: 'Segoe UI', sans-serif; /* Fonte moderna */
-    background: linear-gradient(to right, #f0f4f8, #d9e4f5); /* Gradiente azul-claro profissional */
-    text-align: center;
-    padding: 30px;
-    margin: 0;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/03d1da8d-f4bc-4a28-9547-ce8195d6bb07/La+Creaci%C3%B2n+de+Cheems');
+    background-color: #ffffff;  /* Cor de fundo branca */
+    color: #ffffff;    /* Cor do texto (preto suave) */
+    font-family: Arial, Helvetica, sans-serif;     /* Fonte padrão sem serifa */
+    display: flex;    /* Usa Flexbox para organizar os elementos */
+    justify-content: flex-start;  /* Alinha os itens ao topo (verticalmente) */
+    flex-direction: column;   /* Os elementos aparecem em coluna */
+    align-items: center;    /* Alinha os itens ao centro (horizontalmente) */
+    min-height: 100vh;   /* Garante que a altura mínima seja a da tela inteira */
+    margin: 0;   /* Remove margem externa padrão */
+    padding: 2rem;   /* Espaçamento interno */
+    background-image:url('https://mlwiofhzs3ln.i.optimole.com/cb:hWbt.11cb/w:1920/h:1080/q:mauto/https://airdropalert.com/wp-content/uploads/2024/11/Chill-guy-memecoin.png')
+    
 }
 
-/* Título principal */
+/* Estilo para o título principal */
 h1 {
-    color: #1a1a1a; /* Quase preto */
-    margin-bottom: 40px;
-    font-size: 2.2em;
+    margin-bottom: 1rem;     /* Espaço abaixo do título */
+    text-shadow: 0 1px 2px rgb(255, 255, 255);      /* Sombra leve no texto */
+    color: #ffffff;                                /* Cor do texto */
+    font-size: 2rem;                               /* Tamanho da fonte do título */
 }
 
-/* Container que posiciona os cards lado a lado */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+/* Container com os botões de escolha */
+.choices {
+    display: flex;    /* Coloca os botões lado a lado */
+    gap: 2rem;     /* Espaço entre eles */
+    margin-bottom: 2rem;   /* Espaço abaixo do container */
 }
 
-/* Estilo base para cada card */
-.card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    width: 250px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito ao passar o mouse sobre o card */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Card de Soft Skills: verde-oliva suave */
-.card.soft {
-    border-top: 6px solid #0051ff; 
-}
-
-/* Card de Hard Skills: roxo profissional */
-.card.hard {
-    border-top: 6px solid #4c4d93;
-}
-
-/* Título dentro do card */
-.card h2 {
-    color: #2c2c2c;
-    margin-bottom: 20px;
-}
-
-/* Estilização dos botões */
+/* Estilo dos botões */
 button {
-    background: linear-gradient(to right, #6a4c93, #2d3142); /* Roxo escuro para azul acinzentado */
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    background-color: #3a547c;                     /* Cor de fundo azul escuro */
+    color: #ffffff; /* Texto branco */
+    border: none;  /* Remove borda padrão */
+    border-radius: 8px;   /* Cantos arredondados */
+    padding: 12px 20px;    /* Espaço interno do botão */
+    font-size: 1rem;      /* Tamanho da fonte */
+    font-weight: 600;        /* Fonte mais “forte” */
+    cursor: pointer;                               /* Cursor muda para mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease, 
+                transform 0.2s ease;               /* Animações suaves ao interagir */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);       /* Sombra para dar leve elevação */
+    min-width: 100px;                              /* Largura mínima do botão */
 }
 
-/* Efeito ao passar o mouse no botão */
+/* Quando o botão é pressionado (clicado) */
+button:active {
+    transform: scale(0.95);                        /* Dá uma leve encolhida */
+    background-color: #dcdcdc;                     /* Fica cinza claro */
+}
+
+/* Quando o mouse está sobre o botão */
 button:hover {
-    background: linear-gradient(to right, #52307c, #1f2235);
+    background-color: #e0e0e0;                     /* Muda a cor de fundo ao passar o mouse */
+    transform: rotate(5deg) scale(1.05);           /* Gira levemente e aumenta */
 }
 
-/* Estilo das áreas de pergunta e resposta */
-#pergunta, #resposta {
-    margin-top: 40px;
-    font-size: 1.2em;
-    color: #1a1a1a;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+/* Estilo dos parágrafos */
+p {
+    font-size: 1.2rem; /* Texto um pouco maior */
+    margin: 0.5rem 0;/* Espaço acima e abaixo */
+    min-height: 1.5rem;  /* Garante altura mínima (útil para texto dinâmico) */
+    text-align: center;/* Centraliza o texto */
+    text-shadow: 0 0 6px rgb(255, 255, 255);/* Sombra clara ao redor para destaque */
+}
+/* estilo para o texto que mostra o vencedor*/
+#winner { 
+    font-size: 700; /*negrito forte*/
+    font-size: 1.5rem; /*fonte maior para destaque*/
+    margin-top: 1.5rem;/*espaço acima do texto*/
+    color: #ffffff;/*branco com transparencia*/
+    text-shadow:
+    0 0 10px rgb(255, 255, 255)/* camada 1 brilho ciano suave*/
+    0 0 20px rgb(255, 255, 255)/* camada 2 brilho ciano médio*/
+    0 0 30px rgb(255, 0, 0)  /* camada 3 brilho ciano forte*/
 }
